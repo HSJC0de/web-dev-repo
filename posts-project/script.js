@@ -6,15 +6,6 @@ let postButtonElement = document.querySelector('#id-button-post');
 //add 'posts' to this element
 const containerPostsElement = document.querySelector('.container-posts');
 
-/*
-postButtonElement.addEventListener('click', function (){
-  console.log(titleInputElement.value);
-  console.log(textInputElement.value);
-  titleInputElement.value = '';
-  textInputElement.value = '';
-}) */
-
-
 function createPost(){
   const title = titleInputElement.value;
   const text = textInputElement.value;
@@ -45,5 +36,3 @@ textInputElement.addEventListener('keypress', function(event){
   }
 });
 postButtonElement.addEventListener('click', createPost);
-
-//problem - only posting once, cant post again
