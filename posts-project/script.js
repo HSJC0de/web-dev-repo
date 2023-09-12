@@ -18,9 +18,9 @@ postButtonElement.addEventListener('click', function (){
 function createPost(){
   const title = titleInputElement.value;
   const text = textInputElement.value;
-  console.log(titleInputElement.value);
-  console.log(textInputElement.value);
 
+  titleInputElement.value = '';
+  textInputElement.value = '';
   postHTML = 
   `
   <div class="post">
@@ -36,9 +36,14 @@ function createPost(){
   </div>
   `;
   containerPostsElement.insertAdjacentHTML('beforeend', postHTML);
-
 }
 
+textInputElement.addEventListener('keypress', function(event){
+  if (event.key === 'Enter'){
+    event.preventDefault();
+    createPost();
+  }
+});
 postButtonElement.addEventListener('click', createPost);
 
 //problem - only posting once, cant post again
