@@ -20,8 +20,8 @@ function createPost(){
   const text = textInputElement.value;
   console.log(titleInputElement.value);
   console.log(textInputElement.value);
-  /*
-  containerPostsElement.innerHTML += 
+
+  postHTML = 
   `
   <div class="post">
     <div>
@@ -35,9 +35,8 @@ function createPost(){
     </div>
   </div>
   `;
-  */
-  console.log('test');
-  //postButtonElement = document.querySelector('#id-button-post');
+  containerPostsElement.insertAdjacentHTML('beforeend', postHTML);
+
 }
 
 postButtonElement.addEventListener('click', createPost);
