@@ -32,6 +32,7 @@ h1{
   border: solid;
   padding: 1rem 2rem 2rem 1rem;
   height: fit-content;
+  margin: 1rem 2rem 2rem 1rem;
 }
 
 .container-posts{
@@ -47,10 +48,6 @@ h1{
   margin-bottom: 1rem;
 }
 
-.input-css{
-  width: 100%;
-}
-
 .post{
   padding: 1rem 1rem 1rem 1rem;
   border:solid;
@@ -61,6 +58,7 @@ h1{
   border: solid;
   padding: 1rem 2rem 1rem 2rem;
   height: fit-content;
+  margin: 1rem 2rem 2rem 1rem;
 }
 
 .container-post-text{
