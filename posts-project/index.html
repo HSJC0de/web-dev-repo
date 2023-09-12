@@ -7,15 +7,15 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body style="margin: 0; background-color: #e52165;">
+<body style="margin: 0; background-color: #F5F0E1;">
 
   <div class="container">
 
     <header>
       <h1>Postagram</h1>
-      <button><img class="img-header" src="images/button-home.png"></button>
-      <button><img class="img-header" src="images/button-friends.png"></button>
-      <button><img class="img-header" src="images/button-bell.png"></button>
+      <button class="header-button"><img class="img-header" src="images/button-home.png"></button>
+      <button class="header-button"><img class="img-header" src="images/button-friends.png"></button>
+      <button class="header-button"><img class="img-header" src="images/button-bell.png"></button>
     </header>
     <div class="container-content">
       <div class="container-side-bar">
@@ -30,9 +30,10 @@
       <div class="container-posts">
         <div class="container-input-section">
           <form>
-            <label for="inputArea">Input Text:</label>
+            <input placeholder="Enter title">
             <textarea id="inputArea" rows="5" cols="70"></textarea>
             <button>Insert Image</button>
+            <button>Post</button>
           </form>
         </div>
 
