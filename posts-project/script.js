@@ -1,6 +1,7 @@
 const titleInputElement = document.querySelector('#titleArea');
 const textInputElement = document.querySelector('#inputArea');
 const insertButtonElement = document.querySelector('#id-button-insert');
+const postImageElement = document.querySelector('post-image');
 let postButtonElement = document.querySelector('#id-button-post');
 
 //add 'posts' to this element
@@ -20,9 +21,11 @@ const containerPostsElement = document.querySelector('.container-posts');
         </div>
 */
 
+
 function createPost(){
   const title = titleInputElement.value;
   const text = textInputElement.value;
+  const imageURL = URL.createObjectURL(insertButtonElement.files[0]);
   
   titleInputElement.value = '';
   textInputElement.value = '';
@@ -36,7 +39,7 @@ function createPost(){
       <p>${text}</p>
     </div>
     <div class="container-post-image">
-      <img class="post-image" src="images/post-image-eiffel-tower.jpg">
+      <img class="post-image" src="${imageURL}">
     </div>
   </div>
   `;
