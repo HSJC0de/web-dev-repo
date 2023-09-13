@@ -9,7 +9,7 @@ const containerPostsElement = document.querySelector('.container-posts');
 function createPost(){
   const title = titleInputElement.value;
   const text = textInputElement.value;
-
+  
   titleInputElement.value = '';
   textInputElement.value = '';
   postHTML = 
