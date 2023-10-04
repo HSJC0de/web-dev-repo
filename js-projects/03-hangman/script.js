@@ -15,22 +15,29 @@ function getWord(){
 }
 
 function buildBoxes(){
-  let numBoxes = getWord().length;
+  word = getWord();
+  let numBoxes = word.length;
   for (i = 0; i < numBoxes; i++){
-    letterContainer.innerHTML += `<div class="box">A</div>`;
+    letterContainer.innerHTML += `<div class="box box-position${i}">#</div>`;
   }
 }
 
 function fillCorrect(){
   resetBoxes();
   for (i=0; i<word.length; i++){
-    letterContainer.innerHTML += `<div class="box">${word[i]}</div>`;
+    letterContainer.innerHTML += `<div class="box box-position${i}">${word[i]}</div>`;
+  }
+}
+
+function insertChar(input){
+  for (i = 0; i < word.length; i++){
+    if (input === word[i]){
+      let currentElement = document.querySelector(`.box-position${i}`)
+      currentElement.innerHTML = `<div class="box box-position${i}">${input}</div>`
+    }
   }
 }
 
 
-resetBoxes()
-console.log(getWord());
+resetBoxes();
 buildBoxes();
-console.log(letterContainer.innerHTML);
-fillCorrect();
