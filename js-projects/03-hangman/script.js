@@ -5,7 +5,9 @@ const letterContainer = document.querySelector('.letter-container');
 let word = '';
 
 function resetBoxes(){
-  letterContainer.innerHTML = '';
+  while (letterContainer.firstChild) {
+    letterContainer.removeChild(letterContainer.lastChild);
+  }
 }
 
 function getWord(){
@@ -41,3 +43,8 @@ function insertChar(input){
 
 resetBoxes();
 buildBoxes();
+
+document.addEventListener('keydown', function(event){
+  let key = event.key.toUpperCase();
+  insertChar(key);
+})
