@@ -93,17 +93,18 @@ console.log(dog);
 
 //object to lookup
 
+/* let lookup = {
+  'alpha': 'Adams',
+  'bravo': 'Boston',
+  'charlie': 'Chicago',
+  'delta': 'Denver',
+  'echo': 'Easy',
+  'foxtrot': 'Frank',
+  1: 23
+};
+
 function fun(val){
   let result = '';
-  
-  let lookup = {
-    'alpha': 'Adams',
-    'bravo': 'Boston',
-    'charlie': 'Chicago',
-    'delta': 'Denver',
-    'echo': 'Easy',
-    'foxtrot': 'Frank'
-  };
 
   result = lookup[val];
 
@@ -111,3 +112,85 @@ function fun(val){
 }
 
 console.log(fun('alpha'))
+
+function check(prop){
+  if (lookup.hasOwnProperty(prop)){
+    return lookup[prop];
+  }
+  else{
+    return 'no'
+  }
+}
+ */
+
+
+//manipulating objects in arrays
+
+let arrObj = [
+  {
+    'artist': 'Drake',
+    'genre': 'Rap',
+    'top_songs': [
+      'MELTDOWN',
+      'Slime You Out',
+      'Jimmy Cooks'
+    ]
+  },
+  {
+    'artist': 'TWICE',
+    'genre': 'KPOP',
+    'top_songs': [
+      'The Feels',
+      'MOONLIGHT SUNRISE',
+      'Talk that Talk'
+    ]
+  }
+];
+
+let drakeGenre = arrObj[0]['genre'];
+console.log(drakeGenre);
+
+function listTopSongs(artist){
+  for (i = 0; i < arrObj.length; i++){
+    if (arrObj[i]['artist'] === artist){
+      console.log(arrObj[i]['top_songs']);
+    }
+  }
+}
+
+function changeGenre(artist, newGenre){
+  for (i = 0; i < arrObj.length; i++){
+    if (arrObj[i]['artist'] === artist){
+      arrObj[i]['genre'] = newGenre;
+      console.log(arrObj[i]['genre']);
+    }
+  }
+}
+
+let count = 0;
+while (count < 5){
+  console.log(count);
+  count++;
+}
+
+let array100 = [];
+for (i = 1; i <= 100; i++){
+  array100.push(i);
+}
+console.log(array100);
+
+for (i = 0; i < array100.length; i++){
+  if (array100[i] % 2 === 1){
+    array100.splice(i, 1);
+    i--;
+  }
+}
+
+console.log(array100);
+
+array100 = array100.filter(num => num % 4 === 0);
+
+console.log(array100);
+
+listTopSongs('TWICE');
+changeGenre('TWICE', 'RNB');
