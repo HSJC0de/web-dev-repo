@@ -72,5 +72,7 @@ function removeItemFromArray(index){
 
 addButton.addEventListener('click', function(){
   addItemToArr();
+  inputText.value = '';
+  inputNum.value = '';
   renderItems();
 });
