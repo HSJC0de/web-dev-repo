@@ -19,32 +19,32 @@
     </div>
     <div class="row mt-5">
       <div class="col">
-        <form>
+        <form id="inputForm">
           <div class="row d-flex justify-content-center">
             <div class="col-4">
-              <input type="text" class="form-control" placeholder="Enter grocery item">
+              <input type="text" class="form-control" placeholder="Enter grocery item" id="inputText">
             </div>
             <div class="col-2">
-              <input type="number" class="form-control" placeholder="Enter quantity">
+              <input type="number" class="form-control" placeholder="Enter quantity" id="inputNum">
             </div> 
             <div class="col-2">
-              <button class="btn btn-primary">Add Item</button>
+              <button class="btn btn-primary" id="addButton">Add Item</button>
             </div>
           </div>
         </form>
       </div>
     </div>
     <div class="row">
-      <div class="col"><!-- container for all grocery items -->
+      <div class="col" id="itemCol"><!-- container for all grocery items -->
         <div class="row mt-2 mb-1">
-          <div class="col-4 offset-2" style="word-wrap: break-word;">
+          <div class="col-4 offset-2" style="word-wrap: break-word;" id="textDiv"> <!-- container for item text -->
             <p class="">TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</p>
           </div>
-          <div class="col-2">
+          <div class="col-2" id="quantityDiv"> <!-- container for item quantity -->
             <p>999</p>
           </div>
-          <div class="col-2">
-            <button class="btn btn-danger">Remove</button>
+          <div class="col-2" > <!-- container for remove button -->
+            <button class="btn btn-danger remove-button">Remove</button>
           </div>
         </div>
       </div>
