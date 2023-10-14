@@ -12,4 +12,8 @@ async function checkWeather(cityName){
   document.getElementById('locationName').innerHTML = data.name;
 }
 
-checkWeather('york');
+document.getElementById('myForm').addEventListener('submit', function(event){
+  event.preventDefault();
+  const input = document.getElementById('searchBox').value;
+  checkWeather(input);
+})
