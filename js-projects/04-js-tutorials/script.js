@@ -194,3 +194,11 @@ console.log(array100);
 
 listTopSongs('TWICE');
 changeGenre('TWICE', 'RNB');
+
+function randomRange(max, min){
+  console.log(Math.floor(Math.random() * (max - min + 1) + min));
+}
+
+randomRange(6, 2);
+
+console.log(arrObj[0].artist);
